@@ -1,6 +1,10 @@
 // unsimplified version
 
 // all variables and objects follow format (name)g(id)g(id)...
+// variable declaration - built in variables
+int attempts;
+int mainTime;
+
 // variable declaration - item ids
 
 
@@ -50,7 +54,55 @@ BatSwarm batSwarmg209;
 BlueCoin blueCoin3g211;
 BlueCoin blueCoin1g221;
 Text towerTextg296;
+AlphaTrigger towerTextOpacityHandlingg297;
 Text timerTextg303; // at end
 
+// non event functions
+// functions without a spawn call won't have a group id added
+void setStartPosition() { // built in function
+  player.position = spawnWallg1.position;
+}
 
+void setCameraBoundaries() {
+  camera.leftBoundary = leftDownCameraBoundaryg3.x;
+  camera.downBoundary = leftDownCameraBoundaryg3.y;
+}
 
+void startColorPulsesg41() {
+  unk;
+}
+
+void startVineHandlingg52() {
+  unk;
+}
+
+void startAcidSkeletonHandlingg54() {
+  unk;
+}
+
+void startTowerTextHandlingg296() {
+  unk;
+}
+
+void stopTowerTextHandlingg298() {
+  towerTextOpacityHandlingg297.toggle(false);
+}
+// events will be defined as functions in the form on(event)
+// for the unsimplified file include all calls, even if redundant
+
+// generally parameters won't be passed in. just treat all variables and objects as having global scope
+void onStart() {
+  setStartPosition();
+  setCameraBoundaries();
+  startColorPulsesg41();
+  startVineHandlingg52();
+  startAcidSkeletonHandlingg54();
+  startTowerTextHandlingg296();
+  if(attempts >= 1) { // starts at 0
+    stopTowerTextHandlingg298();
+  }
+  attemptCounter.setOpacity(0);
+  unkg67.toggle(false); // function
+  unkg302.toggle(false); // function
+  unkg306.toggle(false); // function
+}
