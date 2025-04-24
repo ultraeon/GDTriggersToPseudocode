@@ -27,8 +27,11 @@ Vine vine1g31;
 Vine vine5g34;
 Vine vine6g34;
 Box box3g35g44;
-Box box5g44;
-Box box7g44;
-Box box6g46;
-MonsterCage monsterCage
+Box box5g44g61;
+Box box7g44g65;
+Box box6g46g63;
+MonsterCage monsterCageg47g51;
+Skeleton acidSkeletong53; // theres like 10 of these but share exact behavior
+Vine vine7g59;
+
 
