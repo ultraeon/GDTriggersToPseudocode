@@ -9,6 +9,7 @@
 // unique objects will share class and object name
 // some groups correspond to both objects and functions, both will be listed separately
 // if objects are numbered they are in left->right order across the level
+
 SpawnWall spawnWallg1;
 SFX landSFXg2;
 CameraBoundary leftDownCameraBoundaryg3;
@@ -33,5 +34,23 @@ Box box6g46g63;
 MonsterCage monsterCageg47g51;
 Skeleton acidSkeletong53; // theres like 10 of these but share exact behavior
 Vine vine7g59;
+CameraGuide fireballCameraGuideg71;
+Particle fireballParticle2g72;
+Particle fireballParticle1g80;
+Particle coinParticleg100; // multiple
+Particle blueCoinParticleg101; // multiple
+Particle fireballParticle3g119;
+CameraGuide climbCameraGuideg121;
+CameraGuide movingSawCameraGuideg131;
+Saw saw1g132g135;
+Saw saw2g134g137;
+SFXHelper sawClankSFXHelperg143; // multiple sound effect proximity objects
+SFX sawClankingSFXg144;
+BatSwarm batSwarmg209;
+BlueCoin blueCoin3g211;
+BlueCoin blueCoin1g221;
+Text towerTextg296;
+Text timerTextg303; // at end
+
 
 
