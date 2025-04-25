@@ -1,2 +1,4 @@
 # GDTriggersToPsuedocode
-Converting triggers of official levels into psuedocode
+# Goal: Convert triggers of official platfomer levels into c++ psuedocode.  
+# Current Progress:  
+# The Tower:
