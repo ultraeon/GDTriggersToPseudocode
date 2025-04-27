@@ -17,16 +17,12 @@ int coinsi2;
 // if objects are numbered they are in left->right order across the level
 
 SpawnWall spawnWallg1;
-SFX landSFXg2;
-CameraBoundary leftDownCameraBoundaryg3;
-SFX coinSFXg4;
-SFX landSFX2g7;
+Object leftDownCameraBoundaryg3;
 Glow torchGlow1g10;
 Glow torchGlow2g11;
 Box box1g22g44;
 Box box4g22g44;
 Box box2g23g46;
-SFX landSFX3g26;
 Vine vine2g27;
 Vine vine4g27;
 Vine vine3g30;
@@ -51,12 +47,10 @@ CameraGuide movingSawCameraGuideg131;
 Saw saw1g132g135;
 Saw saw2g134g137;
 SFXHelper sawClankSFXHelperg143; // multiple sound effect proximity objects
-SFX sawClankingSFXg144;
 BatSwarm batSwarmg209;
 BlueCoin blueCoin3g211;
 BlueCoin blueCoin1g221;
 Text towerTextg296;
-AlphaTrigger towerTextOpacityHandlingg297;
 Text timerTextg303; // at end
 
 // non event functions
