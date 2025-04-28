@@ -1,319 +1,317 @@
 
-Item IDs(0-2)
-0 = time
-1 = blue coins
-2 = coins
+Item IDs
+t1 = time
+i1 = blue coins
+i2 = coins
 
 
-Group IDs (1-307)
+Group IDs
 
 On level spawn: 1(); 3(); 41(); 52(); 54(); 296(); if(attempts >= 1): 298(); hide attempts; detoggle(67, 302, 306); 
-1(): Spawn group - invis wall at start;
+1(): invis wall at start;
 2(): land sfx;
-3(): left camera edge; down camera edge;
+3(): small line that is left camera edge and down camera edge;
 4(): coin counter update; coin sfx;
-5(): unk
-6(): unk
+5(): unk func;
+6(): unused tp(?) aux above end;
 7(): land sfx;
-8(): unk small helper at start;
-9(): unk
-10(): pulsating torch glow;
-11(): more pulsating torch glow;
-12(): sleep(1.1s); 13(); 14(); 12();
-13(): unk
-14(): unk
-15(): unk
-16(): unk
-17(): unk
-18(): unk
-19(): unk
-20(): unk aux above vine 2;
-21(): unk
+8(): aux below tower text;
+9(): orb sfx;
+10(): big torch glow;
+11(): small torch glow;
+12(torch): sleep(1.1s); 13(); 14(); 12();
+13(torch): unk func;
+14(torch): unk func;
+15(torch): unk func;
+16(torch): unk func;
+17(torch): unk func;
+18(): no objects although move triggers exist?
+19(): unk func;
+20(): aux above vine 2;
+21(): waterfall backgrounds;
 22(): box 1 and box 4;
 23(): box 2;
 24(): box fall sequence(remapped a ton);
-25(): unk
+25(waterfall): unk func;
 26(): block land sfx;
-27(): vine 2 and vine 4;
+27(): vine 2 and vine 4 and vine 8;
 28(): vine handling;
-29(): unk aux above vine 3;
+29(): aux above vine 3;
 30(): vine 3;
 31(): vine 1;
-32(): unk aux above vine 1;
+32(): aux above vine 1;
 33(): unk aux above vine 5;
 34(): vine 5 and vine 6;
-35(): box 3;
-36(): unk
-37(): unk
-38(): unk
-39(): unk
-40(): unk
+35(): box 3 and its spawn;
+36(): box sfx 1;
+37(): box sfx 2;
+38(): box sfx 3;
+39(): box 2 acid splash(also on some random ones later in level);
+40(): box 1 and box 4 acid splash(also on some random ones later in level);
 41(): unk color channel pulse handling;
-42(): unk
-43(): unk
+42(): unused box fall sequence(before remap?);
+43(): box 3 acid splash;
 44(): box 1 and box 3 and box 4 and box 5 and box 7;
-45(): unk
+45(): handle up and down box movement(remaps for 44 and 46);
 46(): box 2 and box 6;
-47(): cage with monster
+47(): cage with monster and chain and aux above cage;
 48(): aux above chain above monster cage
 49(): monster cage swing handling;
 50(): aux above monster cage;
 51(): cage with monster;
 52(): 28();
-53(): bob skeletons in acid up and down;
+53(): purple plants in acid;
 54(): 53();
-55(): unk
-56(): 58();
-57(): unk
-58(): unk
+55(): purple bones or plants in acid;
+56(): checkpoints and spawn(58);
+57(): checkpoints particle and effect;
+58(): checkpoint func;
 59(): vine 7;
-60(): unk aux above vine 7;
+60(): aux above vine 7;
 61(): box 5;
-62(): unk
+62(): box 5 acid splash;
 63(): box 6;
-64(): unk
+64(): box 6 acid splash;
 65(): box 7;
-66(): unk
+66(): box 7 acid splash;
 67(): toggle/detoggle(70);
 68(): toggle/detoggle(69);
 69(): fireball camera lock handling;
 70(): camera reset when backtracking from fireballs;
 71(): fireball camera guide;
-72(): fireball particle 2;
+72(): fireball explosion particle 2;
 73(): individual fireball handling;
-74(): unk
-75(): unk
-76(): unk
-77(): unk
-78(): unk
-79(): unk
-80(): fireball particle 1;
-81(): unk
-82(): unk
-83(): unk
-84(): unk
-85(): unk
-86(): unk
-87(): unk
-88(): unk
-89(): unk
-90(): unk
-91(): unk
-92(): unk
-93(): unk
-94(): unk
-95(): unk
-96(): unk
+74(): fireball 1;
+75(): fireball 1 explosion;
+76(): fireball 1 cannon blast;
+77(): fireball 1 cannon glow;
+78(): fireball 1 cannon & effects + aux above fireball 1 cannon;
+79(): aux above fireball 1 cannon;
+80(): fireball explosion particle 1;
+81(): fireball 1 explosion glow;
+82(): unused(?);
+83(): fireball 2;
+84(): fireball 2 explosion;
+85(): fireball 2 cannon blast;
+86(): fireball 2 cannon glow;
+87(): fireball 2 cannon & effects + aux above fireball 2 cannon;
+88(): fireball 3 cannon & effects + aux above fireball 3 cannon;
+89(): aux above fireball 2 cannon;
+90(): fireball 2 explosion glow;
+91(): fireball 3 cannon glow;
+92(): fireball 3 aux above cannon;
+93(): fireball 3;
+94(): fireball 3 explosion;
+95(): fireball 3 explosion glow;
+96(): fireball 3 cannon blast;
 97(): fireball sequence(73);
-98(): unk
-99(): unk
+98(): fireball 4 cannon & effects + aux above fireball 4 cannon;
+99(): fireball 4 cannon glow;
 100(): coin particles;
 101(): blue coin particles;
-102(): unk
-103(): unk
-104(): unk
-105(): unk
-106(): unk
-107(): unk
-108(): unk
-109(): unk
-110(): unk
-111(): unk
-112(): unk
-113(): unk
-114(): unk
-115(): unk
-116(): unk
-117(): unk
-118(): unk
-119(): fireball particle 3;
-120(): unk
+102(): fireball 4 aux above cannon;
+103(): fireball 4;
+104(): fireball 4 explosion;
+105(): fireball 4 explosion glow;
+106(): fireball 4 cannon blast;
+107(): fireball 5 cannon & effects + aux above fireball 5 cannon;
+108(): fireball 5 cannon glow;
+109(): fireball 5 aux above cannon;
+110(): fireball 5;
+111(): fireball 5 explosion;
+112(): fireball 5 explosion glow;
+113(): fireball 5 cannon blast;
+114(): fireball 1 explosion hitbox;
+115(): fireball 2 explosion hitbox;
+116(): fireball 3 explosion hitbox;
+117(): fireball 4 explosion hitbox;
+118(): fireball 5 explosion hitbox;
+119(): fireball explosion particle 3;
+120(): blue coin 2 sparkle and glow;
 121(): climb camera guide;
 122(): camera reset after fireballs;
-123(): unk
-124(): unk
-125(): unk
-126(): unk
-127(): unk
-128(): unk
+123(): fireball sfx;
+124(): aux above ground between mini blocks and moving spikes;
+125(): unk func;
+126(): mini blocks;
+127(): aux above ground between mini blocks and moving spikes;
+128(): aux 6 blocks above middle of mini blocks;
 129(): start moving bridge;
 130(): camera zoom in before moving spikes;
 131(): moving saw camera guide;
 132(): first saw;
-133(): unk
+133(): unk func;
 134(): second saw;
-135(): first saw;
+135(): large part of first saw;
 136(): start moving saw handling;
-137(): second saw;
-138(): unk
-139(): unk
-140(): unk
-141(): unk
-142(): unk
+137(): large part of second saw;
+138(): unk func;
+139(): chain 1 at moving spikes;
+140(): chain 2 at moving spikes;
+141(): chain under mini blocks;
+142(): unk func;
 143(): saw/moving mini blocks sfx location;
 144(): repeated chain clanking sfx;
 145(): spinning platforms cam + sfx handling;
-146(): unk
+146(): spinning platform 1 axles and central gear and middle platforms;
 147(): start spinning platform handling;
-148(): unk
-149(): unk
-150(): unk
-151(): unk
-152(): unk
-153(): unk
-154(): unk
-155(): unk
-156(): unk
-157(): unk
-158(): unk
-159(): unk
-160(): unk
-161(): unk
-162(): unk
-163(): unk
-164(): unk
-165(): unk
-166(): unk
-167(): unk
-168(): unk
-169(): unk
-170(): unk
-171(): unk
-172(): unk
-173(): unk
-174(): unk
-175(): unk
-176(): unk
-177(): unk
-178(): unk
-179(): unk
-180(): unk
-181(): unk
-182(): unk
-183(): unk
-184(): unk
-185(): unk
-186(): unk
-187(): unk
-188(): unk
-189(): unk
-190(): unk
-191(): unk
+148(): spinning platform 1 central gear;
+149(): spinning platform 1 left middle platform;
+150(): spinning platform 1 left platforms wo middle;
+151(): unk func;
+152(): spinning platform 1 top middle platform;
+153(): spinning platform 1 top platforms wo middle;
+154(): spinning platform 1 right middle platform;
+155(): spinning platform 1 right platforms wo middle;
+156(): spinning platform 1 bottom middle platform;
+157(): spinning platform 1 bottom platforms wo middle;
+158(): spinning platform 2 axles and central gear and middle platforms;
+159(): spinning platform 2 central gear;
+160(): unk func;
+161(): spinning platform 2 left platforms wo middle;
+162(): spinning platform 2 left middle platform;
+163(): spinning platform 2 top platforms wo middle;
+164(): spinning platform 2 top middle platform;
+165(): spinning platform 2 right platforms wo middle;
+166(): spinning platform 2 right middle platform;
+167(): spinning platform 2 bottom platforms wo middle;
+168(): spinning platform 2 bottom middle platform;
+169(): visual platform part of all spinning platforms;
+170(): aux below spinning platform 3;
+171(): aux down left oob from spawn(under black);
+172(): aux left oob from spawn;
+173(): spinning platform 3 axles and central gear and middle platforms;
+174(): spinning platform 3 central gear;
+175(): spinning platform 3 left platforms wo middle;
+176(): spinning platform 3 left middle platform;
+177(): spinning platform 3 top platforms wo middle;
+178(): spinning platform 3 top middle platform;
+179(): spinning platform 3 right platforms wo middle;
+180(): spinning platform 3 right middle platform;
+181(): spinning platform 3 bottom platforms wo middle;
+182(): spinning platform 3 bottom middle platform;
+183(): unk func;
+184(): spinning platforms sfx;
+185(): auxes scattered throughout whole level(sfx?);
+186(): auxes for spinning platforms sfx; 
+187(): aux 8 blocks above blue coin 3;
+188(): aux above bats;
+189(): aux above spawn(305)
+190(): aux 10 blocks above end door tp(unused?);
+191(): surveillance camera eye;
 192(): end door sequence;
-193(): unk
-194(): unk
-195(): unk
-196(): unk
-197(): unk
-198(): unk
-199(): unk
-200(): unk
-201(): unk
-202(): unk
-203(): unk
-204(): unk
-205(): unk
-206(): unk
-207(): unk
+193(): lasers and surveillance camera and eye(parent);
+194(): end door button;
+195(): animation help in end door sequence;
+196(): top lasers;
+197(): animation help in end door sequence;
+198(): exclamation point in end door sequence;
+199(): end door bars 1 and 3 and 5;
+200(): physical end door and end door bars 2 and 4;
+201(): I see you text;
+202(): unk func;
+203(): left aux left of I see you;
+204(): right aux left of I see you;
+205(): 2nd e in "see";
+206(): I see you particle;
+207(): door particle and glow;
 208(): bat handling at end walk;
 209(): bats;
-210(): unk
-211(): third blue coin;
-212(): unk
-213(): 5(); unk
-214(): 5(120->212); unk
-215(): unk
-216(): unk
-217(): unk
-218(): 5(120->219); unk
-219(): unk
-220(): unk
-221(): first blue coin;
-222(): start third blue coin lighting;
-223(): unk
-224(): start first blue coin lighting;
-225(): unk
-226(): stop third blue coin lighting;
+210(): bottom lasers;
+211(): blue coin 3 and surronding objects(for lighting);
+212(): blue coin 3 sparkle and glow;
+213(): 5();
+214(): 5(120->212);
+215(): blue coin sfx;
+216(): sped up blue coin sfx(unused?);
+217(): unk func + sfx;
+218(): 5(120->219);
+219(): blue coin 1 sparkle and glow;
+220(): door open sfx(idk what for);
+221(): blue coin 1 and surronding objects(for lighting);
+222(): start blue coin 3 lighting;
+223(): unk func;
+224(): start blue coin 1 lighting;
+225(): unk func;
+226(): stop blue coin 3 lighting;
 227(): end door teleport;
-228(): unk
-229(): unk
-230(): unk
-231(): unk
-232(): unk
-233(): unk
-234(): unk
+228(): aux after end door(teleport destination);
+229(): aux in end door(unused teleport destination?);
+230(): unk func;
+231(): unk func;
+232(): auxes inside falling end platform;
+233(): visual pillar right of end button;
+234(): end button and particles;
 235(): start end sequence;
-236(): unk
-237(): unk
-238(): unk
-239(): unk
-240(): unk
-241(): unk
-242(): unk
-243(): unk
-244(): unk
-245(): unk
-246(): unk
-247(): unk
-248(): unk
-249(): unk
-250(): unk
-251(): unk
-252(): unk
-253(): unk
-254(): unk
-255(): unk
-256(): unk
-257(): unk
-258(): unk
-259(): unk
-260(): unk
-261(): unk
-262(): unk
-263(): unk
-264(): unk
-265(): unk
-266(): unk
-267(): unk
-268(): unk
-269(): unk
-270(): unk
-271(): unk
-272(): unk
-273(): unk
-274(): unk
-275(): unk
-276(): unk
-277(): unk
-278(): unk
-279(): unk
-280(): unk
-281(): unk
-282(): unk
-283(): unk
-284(): unk
-285(): unk
-286(): unk
+236(): visual left pillar that falls down;
+237(): physical left pillar that tps down;
+238(): aux above middle of falling platform;
+239(): end platform surveillance camera and chain (eye parent);
+240(): middle chain on end platform surveillance camera;
+241(): top end platform camera duplicate;
+242(): one from bottom end platform camera duplicate;
+243(): bottom end platform camera duplicate;
+244(): unk func;
+245(): ceiling piece directly above left pillar;
+246(): top chain on left pillar chains;
+247(): left pillar chains;
+248(): top chain on right pillar chains;
+249(): right pillar chains;
+250(): all of falling platform;
+251(): lower chains on left pillar chains;
+252(): middle chain on left pillar chains;
+253(): lower chains on right pillar chains;
+254(): middle chain on right pillar chains;
+255(): physical falling platform;
+256(): end platform button glow;
+257(): all of coin coin block and text;
+258(): unk func;
+259(): on hit first coin block 258();
+260(): all of blue coin coin block and text;
+261(): on hit second coin block 258(remapped);
+262(): all of timer coin block and text;
+263(): on hit third coin block 258(remapped);
+264(): unk func;
+265(): unk func;
+266(): visible coin coin block and text;
+267(): unk func;
+268(): unk func;
+269(): visible blue coin coin block and text;
+270(): unk func;
+271(): unk func;
+272(): visible timer coin block and text;
+273(): unk func;
+274(): unk func;
+275(): unk func;
+276(): level coin 1(coins);
+277(): level coin 2(blue coins);
+278(): level coin 3(time);
+279(): unk func;
+280(): unk func;
+281(): unk func;
+282(): time edit after door;
+283(): end platform surveillance camera and aux(parent);
+284(): end platform green smoke and lines;
+285(): end platform green particles;
+286(): end platform green gradient backdrop;
 287(): toggle/detoggle(far right 69);
-288(): unk
-289(): unk
-290(): unk
+288(): unk func;
+289(): all level coin block parts;
+290(): unk func;
 291(): 290(); detoggle(294);
 292(): final room camera;
-293(): unk
-294(): unk
+293(): unk func;
+294(): unk func;
 295(): final room camera reset if backtrack;
 296(): "The Tower" at start;
 297(): alpha triggers for "The Tower";
 298(): detoggle(297);
-299(): unk
+299(): chain 4 from top on left pillar chains;
 300(): move 69 and 70;
 301(): toggle camera reset at fireballs(70);
 302(): toggle fireball camera(69);
-303(): handle timer text for third level coin;
+303(): timer text for third level coin;
 304(): toggle/detoggle(305);
 305(): end walk cam handling;
 306(): toggle/detoggle(307);
 307(): stop end walk cam if backtracking;
-
-
