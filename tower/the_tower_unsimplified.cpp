@@ -76,14 +76,39 @@ CannonBlast fireball2CannonBlastg85g87;
 Glow fireball2CannonGlowg86g87;
 Cannon fireball2Cannong87;
 Auxiliary fireball2CannonHelperg87g89;
-CannonBlast fireball3CannonBlastg88;
-Glow fireball3CannonGlowg88;
+CannonBlast fireball3CannonBlastg88g96;
+Glow fireball3CannonGlowg88g91;
 Cannon fireball3Cannong88;
-Auxiliary fireball3CannonHelperg88;
+Auxiliary fireball3CannonHelperg88g92;
 Glow fireball2ExplosionGlowg90;
+Fireball fireball3g93;
+Explosion fireball3Explosiong94;
+Glow fireball3ExplosionGlowg95;
+CannonBlast fireball4CannonBlastg98g106;
+Glow fireball4CannonGlowg98g99;
+Cannon fireball4Cannong98;
+Auxiliary fireball4CannonHelperg98g102;
 Particle coinParticleg100; // multiple
 Particle blueCoinParticleg101; // multiple
+Fireball fireball4g103;
+Explosion fireball4Explosiong104;
+Glow fireball4ExplosionGlowg105;
+CannonBlast fireball5CannonBlastg107g113;
+Glow fireball5CannonGlowg107g108;
+Cannon fireball5Cannong107;
+Auxiliary fireball5CannonHelperg107g109;
+Fireball fireball5g110;
+Explosion fireball5Explosiong111;
+Glow fireball5ExplosionGlowg112;
+DamageHitbox fireball1ExplosionHitboxg114;
+DamageHitbox fireball2ExplosionHitboxg115;
+DamageHitbox fireball3ExplosionHitboxg116;
+DamageHitbox fireball4ExplosionHitboxg117;
+DamageHitbox fireball5ExplosionHitboxg118;
 Particle fireballExplosionParticle3g119;
+//
+// Current Progress
+//
 CameraGuide climbCameraGuideg121;
 CameraGuide movingSawCameraGuideg131;
 Saw saw1g132g135;
