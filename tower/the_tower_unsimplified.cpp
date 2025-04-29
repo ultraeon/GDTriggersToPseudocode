@@ -117,8 +117,41 @@ Saw saw2g134g137;
 Chain sawChain1g139;
 Chain sawChain2g140;
 Chain miniBlockChaing141;
-SFXHelper sawClankSFXHelperg143; // multiple sound effect proximity objects
+Auxiliary sawClankHelperg143; // multiple sound effect proximity objects
 Axle spinningPlatform1Axleg146;
+Gear spinningPlatform1CentralGearg146g148;
+Platform spinningPlatform1LeftMiddlePlatformg146g149; // dang thats a long name
+Platform spinningPlatform1TopMiddlePlatformg146g152;
+Platform spinningPlatform1RightMiddlePlatformg146g154;
+Platform spinningPlatform1BottomMiddlePlatformg146g156;
+Platform spinningPlatform1LeftPlatformg150; // two non middle ones
+Platform spinningPlatform1TopPlatformg153; // ^
+Platform spinningPlatform1RightPlatformg155; // ^
+Platform spinningPlatform1BottomPlatformg157; // ^
+
+Axle spinningPlatform2Axleg158;
+Gear spinningPlatform2CentralGearg158g159;
+Platform spinningPlatform2LeftMiddlePlatformg158g162; // dang thats a long name pt 2
+Platform spinningPlatform2TopMiddlePlatformg158g164;
+Platform spinningPlatform2RightMiddlePlatformg158g166;
+Platform spinningPlatform2BottomMiddlePlatformg158g168;
+Platform spinningPlatform2LeftPlatformg161; // two non middle ones
+Platform spinningPlatform2TopPlatformg163; // ^
+Platform spinningPlatform2RightPlatformg165; // ^
+Platform spinningPlatform2BottomPlatformg167; // ^
+
+Axle spinningPlatform3Axleg173;
+Gear spinningPlatform3CentralGearg173g174;
+Platform spinningPlatform3LeftMiddlePlatformg173g176; // dang thats a long name pt 3
+Platform spinningPlatform3TopMiddlePlatformg173g178;
+Platform spinningPlatform3RightMiddlePlatformg173g180;
+Platform spinningPlatform3BottomMiddlePlatformg173g182;
+Platform spinningPlatform3LeftPlatformg175; // two non middle ones
+Platform spinningPlatform3TopPlatformg177; // ^
+Platform spinningPlatform3RightPlatformg179; // ^
+Platform spinningPlatform3BottomPlatformg181; // ^
+
+Auxiliary unkSFXHelperg185; // i genuinely have no idea what these are for
 //
 // Current Progress
 //
