@@ -106,14 +106,22 @@ DamageHitbox fireball3ExplosionHitboxg116;
 DamageHitbox fireball4ExplosionHitboxg117;
 DamageHitbox fireball5ExplosionHitboxg118;
 Particle fireballExplosionParticle3g119;
-//
-// Current Progress
-//
+Sparkle blueCoin2Sparkleg120;
+Glow blueCoin2Glowg120;
 CameraGuide climbCameraGuideg121;
+Auxiliary miniBlockHelperg124g127; // unknown purpose
+Block miniBlockg126; // like 30 of these make up the wiggly bridge thing
 CameraGuide movingSawCameraGuideg131;
 Saw saw1g132g135;
 Saw saw2g134g137;
+Chain sawChain1g139;
+Chain sawChain2g140;
+Chain miniBlockChaing141;
 SFXHelper sawClankSFXHelperg143; // multiple sound effect proximity objects
+Axle spinningPlatform1Axleg146;
+//
+// Current Progress
+//
 BatSwarm batSwarmg209;
 BlueCoin blueCoin3g211;
 BlueCoin blueCoin1g221;
