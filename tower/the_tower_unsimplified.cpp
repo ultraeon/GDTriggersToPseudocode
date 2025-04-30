@@ -1,6 +1,7 @@
 // unsimplified version
 
 // all variables and objects follow format (name)g(id)g(id)...
+// if an object is the parent of a group it will be (name)p(id)
 // variable declaration - built in variables
 int attempts;
 int mainTime;
@@ -18,12 +19,12 @@ int coinsi2;
 
 SpawnWall spawnWallg1; // invisible and at spawn
 Auxiliary leftDownBoundaryg3; // at x = 0 y = smth
-Auxiliary alternateTeleportg6; // unused
+Auxiliary alternateTeleport1g6; // unused
 Auxiliary towerTextHelperg8; // idk what this is for
 Glow bigTorchGlowg10; // torches scattered throughout level
 Glow smallTorchGlowg11; // ^
 Auxiliary vine2Helperg20; // vine helpers are just used in conjunction with the scale triggers
-WaterfallBackground waterfallBackgroundg21; // waterfalls scattered throughout level
+Background waterfallBackgroundg21; // waterfalls scattered throughout level
 Box box1g22g44; 
 Box box4g22g44;
 Box box2g23g46;
@@ -151,15 +152,82 @@ Platform spinningPlatform3TopPlatformg177; // ^
 Platform spinningPlatform3RightPlatformg179; // ^
 Platform spinningPlatform3BottomPlatformg181; // ^
 
-Auxiliary unkSFXHelperg185; // i genuinely have no idea what these are for
-//
-// Current Progress
-//
+Auxiliary unkSFXHelperg185; // scattered through whole level and i genuinely have no idea what these are for scattered
+Auxiliary spinningPlatformSFXHelperg186; // a few of these
+Auxiliary unkHelperg187; // 8 blocks above blue coin 3
+Auxiliary batHelperg188;
+Auxiliary unkhelperg189; // above spawn(305)
+Auxiliary alternateTeleport2g190; // unused afaik
+Eye doorCameraEyeg191p193; // at door self explanatory
+Camera doorCamerag193;
+Laser topLaserg193g196;
+Laser bottomLaserg193g210;
+Button doorButtong194;
+Animation doorCameraAnimation1g195; // idk how these objects work
+Animation doorCameraAnimation2g197; // ^
+Text doorExclamationPointg198; // part of the sequence obv
+Bar doorBar1g199;
+Bar doorBar3g199;
+Bar doorBar5g199;
+Bar doorBar2g200;
+Bar doorBar4g200;
+Block doorg200; // physical part
+Text doorTextg201; // I see you
+Auxiliary doorAnimationHelper1g203; // purpose unknown left of 204
+Auxiliary doorAnimationHelper2g204; // ^ right of 203 and left of I see you
+Text doorTextE2g205; // 2nd e in i see you as name implies
+Particle doorTextParticleg206;
+Particle doorParticleg207;
+Glow doorGlowg207;
 BatSwarm batSwarmg209;
-BlueCoin blueCoin3g211;
-BlueCoin blueCoin1g221;
+BlueCoin blueCoin3g211; // for lighting
+Object blueCoin3Surrondingsg211; // for lighting
+Sparkle blueCoin3Sparkleg212;
+Glow blueCoin3Glowg212;
+Sparkle blueCoin1Sparkleg219;
+Glow blueCoin1Glowg219;
+BlueCoin blueCoin1g221; // for lighting
+Object blueCoin3Surrondingsg221; // for lighting
+Auxiliary teleportDestinationg228; // after entering the door
+Auxiliary alternateTeleport3g229; // why did robtop add so many unused teleports bruh
+Auxiliary fallingPlatformHelperg232g250; // multiple located inside the falling platform
+Pillar rightPillarg233; // right of ending sequence button
+Button fallingPlatformButtong234;
+Particle fallingPlatformButtonParticleg234;
+Pillar leftPillarg236; // only visual part
+Block leftPillarBlockg237; // physical part that tps down
+Auxiliary unkHelperg238; // idk whether its for falling platform or the camera
+Camera fallingPlatformCamerag239g283;
+Chain fallingPlatformCameraChaing239g240; // 240 only middle I'll see if this makes code unreadable and change if needed
+Eye fallingPlatformCameraEyep239g283;
+Animation fallingPlatformCameraAnimation1g241; // top
+Animation fallingPlatformCameraAnimation2g242; // one from bottom
+Animation fallingPlatformCameraAnimation3g243; // bottom
+Ceiling leftPillarCeilingg245; // idk why this is a group
+Chain leftPillarTopChaing246g247;
+Chain leftPillarMiddleChaing247g252;
+Chain leftPillarLowerChainsg247g251;
+Chain leftPillarUpperMiddleChaing247g299; // idk why this is a group either
+Chain rightPillarTopChaing248g249;
+Chain leftPillarMiddleChaing249g254;
+Chain leftPillarLowerChainsg249g253;
+Platform fallingPlatformg250; // everything on it too
+Block fallingPlatformBlockg250g255; // physical part
+Glow fallingPlatformButtonGlowg256;
+Block coinBlock1g257g266g289; // for coins
+Text coinBlock1Textg257g266; // ^
+Block coinBlock2g260g269g289; // for blue coins
+Text coinBlock2Textg260g269; // ^
+Block coinBlock3g262g272g289; // for time
+Text coinBlock3Textg262g272g303; // ^
+LevelCoin levelCoin1g276; // for coins
+LevelCoin levelCoin2g277; // for blue coins
+LevelCoin levelCoin3g278; // for time
+Auxiliary fallingPlatformCameraHelperp283; // idk what it does but ye
+Smoke fallingPlatformSmokeg284; // under the platform before it falls
+Particle fallingPlatformParticleg285; // ^
+Background fallingPlatformBackgroundg286; // ^
 Text towerTextg296;
-Text timerTextg303; // at end
 
 // non event functions
 // functions without a spawn call won't have a group id added
