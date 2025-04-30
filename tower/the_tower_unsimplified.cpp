@@ -237,11 +237,39 @@ void setStartPosition() { // built in function
 
 void setCameraBoundaries() {
   camera.setLeftBoundary(leftDownCameraBoundaryg3.getX());
-  camera.setDownBoundary(leftDownCameraBoundaryg3.getY());
+  camera.setBottomBoundary(leftDownCameraBoundaryg3.getY());
 }
 
-void incrementCoinCounterg4() {
-  coinsi2++;
+void unkg5() {
+  unk;
+}
+
+void unkg12() {
+  unk;
+}
+
+void unkg13() {
+  unk;
+}
+
+void unkg14() {
+  unk;
+}
+
+void unkg15() {
+  unk;
+}
+
+void unkg16() {
+  unk;
+}
+
+void unkg17() {
+  unk;
+}
+
+void unkg19() {
+  unk;
 }
 
 void startBoxFallg24(int box) {
@@ -256,11 +284,35 @@ void startBoxFallg24(int box) {
   }
 }
 
+void unkg25() {
+  unk;
+}
+
 void vineHandlingg28() {
   unk;
 }
 
+void unkg36() {
+  playSFX(unk);
+}
+
+void unkg37() {
+  playSFX(unk);
+}
+
+void unkg38() {
+  playSFX(unk);
+}
+
 void startColorPulsesg41() {
+  unk;
+}
+
+void unkg42() { // unused I believe
+  unk;
+}
+
+void unkg45() {
   unk;
 }
 
@@ -273,6 +325,22 @@ void startVineHandlingg52() {
 }
 
 void startAcidSkeletonHandlingg54() {
+  unk;
+}
+
+void unkg56() {
+  unk;
+}
+
+void unkg58() { // checkpoint animation
+  unk;
+}
+
+void unkg67() {
+  unk;
+}
+
+void unkg68() {
   unk;
 }
 
@@ -298,6 +366,14 @@ void resetCameraAfterFireballsg122() {
   unk;
 }
 
+void unkg123() {
+  unk;
+}
+
+void unkg125() {
+  unk;
+}
+
 void startMovingBridgeHandlingg129() {
   unk;
 }
@@ -306,15 +382,27 @@ void cameraHandlingBeforeMovingSpikesg130() {
   unk;
 }
 
+void unkg133() {
+  unk;
+}
+
 void startMovingSawHandlingg136() {
   unk;
 }
 
-void handleSpinningPlatformsCamerag145() { // broke up into 2 idk if thats best
+void unkg138() {
   unk;
 }
 
-void handleSpinningPlatformsSFXg145() { // a lot of unks
+void unkg142() {
+  unk;
+}
+
+void unkg144() {
+  unk;
+}
+
+void unkg145() {
   unk;
 }
 
@@ -322,7 +410,27 @@ void startSpinningPlatformsg147() { // naming these things is hard man :(
   unk;
 }
 
+void unkg151() {
+  unk;
+}
+
+void unkg160() {
+  unk;
+}
+
+void unkg183() {
+  unk;
+}
+
+void unkg184() {
+  unk;
+}
+
 void startDoorSequenceg192() { // i could switch this to an event function, but I'd rather have it as the events trigger the spawns
+  unk;
+}
+
+void unkg202() {
   unk;
 }
 
@@ -330,7 +438,39 @@ void handleBatsg208() { // interacts with g209 ^_^
   unk;
 }
 
+void unkg213() {
+  unk;
+}
+
+void unkg214() {
+  unk;
+}
+
+void unkg215() {
+  unk;
+}
+
+void unkg216() {
+  unk;
+}
+
+void unkg217() {
+  unk;
+}
+
+void unkg218() {
+  unk;
+}
+
+void unkg220() {
+  unk;
+}
+
 void startBlueCoin3Lightingg222() { // robtop is really sporadic with his ids, goofy lil fellow
+  unk;
+}
+
+void unkg223() {
   unk;
 }
 
@@ -338,7 +478,23 @@ void startBlueCoin1Lightingg224() { // the fog shall devour us all
   unk;
 }
 
+void unkg225() {
+  unk;
+}
+
 void stopBlueCoin3Lightingg226() { // why is this neccessary? I have no idea. You do you robtop
+  unk;
+}
+
+void unkg227() {
+  unk;
+}
+
+void unkg230() {
+  unk;
+}
+
+void unkg231() {
   unk;
 }
 
@@ -346,15 +502,140 @@ void levelEndSequenceg235() { // the end of the level, but not the end of my suf
   unk;
 }
 
+void unkg244() {
+  unk;
+}
+
+void unkg258() {
+  unk;
+}
+
+void unkg259() {
+  unk;
+}
+
+void unkg261() {
+  unk;
+}
+
+void unkg263() {
+  unk;
+}
+
+void unkg264() {
+  unk;
+}
+
+void unkg265() {
+  unk;
+}
+
+void unkg267() {
+  unk;
+}
+
+void unkg268() {
+  unk;
+}
+
+void unkg270() {
+  unk;
+}
+
+void unkg271() {
+  unk;
+}
+
+void unkg273() {
+  unk;
+}
+
+void unkg274() {
+  unk;
+}
+
+void unkg275() {
+  unk;
+}
+
+void unkg279() {
+  unk;
+}
+
+void unkg280() {
+  unk;
+}
+
+void unkg281() {
+  unk;
+}
+
+void unkg282() {
+  unk;
+}
+
+void unkg287() {
+  unk;
+}
+
+void unkg288() {
+  unk;
+}
+
+void unkg290() {
+  unk;
+}
+
+void unkg291() {
+  unk;
+}
+
+void unkg293() {
+  unk;
+}
+
+void unkg294() {
+  unk;
+}
+
+void unkg295() {
+  unk;
+}
+
 void startTowerTextHandlingg296() {
   unk;
 }
 
-void stopTowerTextHandlingg298() {
-  towerTextOpacityHandlingg297.toggle(false);
+void unkg297() {
+  unk;
+}
+
+
+void unkg298() {
+  unk;
+}
+
+void unkg300() {
+  unk;
+}
+
+void unkg301() {
+  unk;
+}
+
+void unkg302() {
+  unk;
+}
+
+void unkg304() {
+  unk;
 }
 
 void startEndWalkCamerag305() {
+  unk;
+}
+
+void unkg306() {
   unk;
 }
 
@@ -384,6 +665,23 @@ void onStart() {
   unkg306.toggle(false); // function
 }
 
-void onTouchBox(int box) { // parameter is what box is touched - 1-7 based on x position in level
-  startBoxFallg24(box);
+void onUnkg2() {
+  playSFX(unk);
+}
+
+void onTouchCoing4() {
+  coinsi2++;
+  playSFX(unk);
+}
+
+void onUnkg7() {
+  playSFX(unk);
+}
+
+void onHitOrbg9() { // any orb
+  playSFX(unk);
+}
+
+void onUnkg26() {
+  playSFX(unk);
 }
