@@ -240,8 +240,24 @@ void setCameraBoundaries() {
   camera.setBottomBoundary(leftDownCameraBoundaryg3.getY());
 }
 
+void unkg2() {
+  playSFX(unk);
+}
+
+void unkg4() {
+  unk;
+}
+
 void unkg5() {
   unk;
+}
+
+void unkg7() {
+  unk;
+}
+
+void unkg9() {
+  playSFX(unk);
 }
 
 void unkg12() {
@@ -285,6 +301,10 @@ void startBoxFallg24(int box) {
 }
 
 void unkg25() {
+  unk;
+}
+
+void unkg26() {
   unk;
 }
 
@@ -665,21 +685,20 @@ void onStart() {
   unkg306.toggle(false); // function
 }
 
-void onUnkg2() {
-  playSFX(unk);
+void onLanding() { // all landings > tiny landing
+  unkg2();
 }
 
-void onTouchCoing4() {
-  coinsi2++;
-  playSFX(unk);
+void onTouchCoin() {
+  unkg4();
 }
 
 void onUnkg7() {
   playSFX(unk);
 }
 
-void onHitOrbg9() { // any orb
-  playSFX(unk);
+void onHitOrb() { // any orb
+  unkg9();
 }
 
 void onUnkg26() {
