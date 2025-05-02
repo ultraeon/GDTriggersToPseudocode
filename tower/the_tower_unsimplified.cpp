@@ -322,28 +322,49 @@ void unused1g19() { // completely unused function, maybe intended for up and dow
   unused1g19();
 }
 
-void startBoxFallg24(int box) {
-  switch(box) {
-    case 1: unk;
-    case 2: unk;
-    case 3: unk;
-    case 4: unk;
-    case 5: unk;
-    case 6: unk;
-    case 7: unk;
+int cycle24 = 0; // another sequence lets go
+void startBoxFallg24() {
+  switch(cycle24 % 3) {
+    case 0: unkg36();
+    case 1: unkg37();
+    case 2: unkg38();
   }
+  box1g22g44.move(5, 0, 0.05);
+  box4g22g44.move(5, 0, 0.05);
+  box1g22g44.move(-5, 0, 0.05);
+  box4g22g44.move(-5, 0, 0.05);
+  box1g22g44.move(5, 0, 0.05);
+  box4g22g44.move(5, 0, 0.05);
+  box1g22g44.move(-5, 0, 0.05);
+  box4g22g44.move(-5, 0, 0.05);
+  box1g22g44.move(0, -70, 0.45);
+  box4g22g44.move(0, -70, 0.45);
+  playSFX("Drop In Liquid Splash 03", 0.3, -2);
+  box1AcidSplashg40.animate(0);
+  box4AcidSplashg40.animate(0);
+  box1g22g44.move(0, 70, 1);
+  box4g22g44.move(0, 70, 1);
+  cycle24++;
 }
 
-void unkg25() {
-  unk;
+void waterfallEffectg25() {
+  waterfallBackgroundg21.scale(1.281, 1, 0.81);
+  waterfallBackgroundg21.scale(1, 1, 0.81);
+  waterfallEffectg25();
 }
 
 void unkg26() {
-  unk;
+  playSFX("Wood Hit 01", 0.85, 0);
 }
 
-void vineHandlingg28() {
-  unk;
+void vineEffectg28() {
+  vine2g27.scale(vine2Helperg20, 1, 1.181, 1);
+  vine4g27.scale(vine2Helperg20, 1, 1.181, 1);
+  vine8g27.scale(vine2Helperg20, 1, 1.181, 1);
+  vine2g27.scale(vine2Helperg20, 1, 1, 1);
+  vine4g27.scale(vine2Helperg20, 1, 1, 1);
+  vine8g27.scale(vine2Helperg20, 1, 1, 1);
+  vineEffectg28();
 }
 
 void unkg36() {
