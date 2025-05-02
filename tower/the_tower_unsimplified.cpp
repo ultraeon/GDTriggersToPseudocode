@@ -229,6 +229,17 @@ Particle fallingPlatformParticleg285; // ^
 Background fallingPlatformBackgroundg286; // ^
 Text towerTextg296;
 
+// built-in function declaration
+// used to highlight parameter order and the like
+// unintresting and non-gameplay impacted parameters will not be included for the sake of my sanity
+void playSFX(String sfxIdentifier, float volume, int speed);
+void sleep(float seconds);
+// object method declaration
+// applies to all objects
+void move(int deltaX, int deltaY, float seconds);
+void scale(Object center, int xScale, int yScale, float seconds);
+void scale(int xScale, int yScale, float seconds);
+
 // non event functions
 // functions without a spawn call won't have a group id added
 void setStartPosition() { // built in function
@@ -240,52 +251,75 @@ void setCameraBoundaries() {
   camera.setBottomBoundary(leftDownCameraBoundaryg3.getY());
 }
 
-void unkg2() {
-  playSFX(unk);
+void playLandingSFXg2() {
+  playSFX("Run Grass 02", 0.29, -1);
 }
 
-void unkg4() {
-  unk;
+void coinPickupg4() {
+  coinsi2++;
+  playSFX("Coin Game Pick Up 06", 0.4, 0);
 }
 
-void unkg5() {
-  unk;
+// cycle variable will be defined for all sequences in form cycle(id)
+// just treat the scope as global
+int cycle5 = 0;
+void blueCoinPickupg5() {
+  switch(cycle5 % 3) {
+    case 0: unkg215();
+    case 1: unkg216();
+    case 2: unkg217();
+  }
+  playSFX("Coin Pop 01", 0.4, 0);
+  blueCoin2Sparkleg120.toggle(false); // toggle true activates, toggle false deactivates
+  blueCoin2Glowg120.toggle(false);
+  cycle5++;
 }
 
 void unkg7() {
-  unk;
+  playSFX("Run Grass 02", 0.29, -1);
 }
 
-void unkg9() {
-  playSFX(unk);
+void playOrbSFXg9() {
+  playSFX("Classic Jump A 01", 0.15, 0);
+  playSFX("Rock Impact 01", 0.6, 0);
 }
 
-void unkg12() {
-  unk;
+void bigTorchGlowEffectg12() {
+  growBigTorchGlowg13();
+  sleep(0.5777);
+  shrinkBigTorchGlowg14();
+  sleep(0.5777);
+  bigTorchGlowEffectg12();
 }
 
-void unkg13() {
-  unk;
+void growBigTorchGlowg13() {
+  bigTorchGlowg10.scale(1.1, 1.1, 0.5);
 }
 
-void unkg14() {
-  unk;
+void shrinkBigTorchGlowg14() {
+  bigTorchGlowg10.scale(1, 1, 0.5); // scaling factors all based on original size
 }
 
-void unkg15() {
-  unk;
+void smallTorchGlowEffectg15() {
+  growSmallTorchGlowg16();
+  sleep(0.8666);
+  shrinkSmallTorchGlowg17();
+  sleep(0.8666);
+  smallTorchGlowEffectg15();
 }
 
-void unkg16() {
-  unk;
+void growSmallTorchGlowg16() {
+  smallTorchGlowg11.scale(1.15, 1.15, 0.8);
 }
 
-void unkg17() {
-  unk;
+void shrinkSmallTorchGlowg17() {
+  smallTorchGlowg11.scale(1, 1, 0.8);
 }
 
-void unkg19() {
-  unk;
+void unused1g19() { // completely unused function, maybe intended for up and down coin movement or smth
+  NULLg18.move(0, -3, 1); // NULL corresponds to no objects existing within a group
+  NULLg18.move(0, 3, 1);
+  unused1g19();
 }
 
 void startBoxFallg24(int box) {
