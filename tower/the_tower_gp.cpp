@@ -152,11 +152,31 @@ void startBoxFallg24() {
   box4g22g44.move(0, 70, 1);
 }
 
-void unkg45() {
+void unkg45() { // box 14357
+  box1g22g44;
+  box3g35g44;
+  box4g22g44;
+  box5g44g61;
+  box7g44g65;
+}
+
+void handleFireballg73() {
   unk;
 }
 
-void handleFireballg73() { // I presume the fireball matters
+void handleFireballa1g73() { // 74->83, 78->87, 79->89, 114->115
+  unk;
+}
+
+void handleFireballa2g73() { // 74->93, 78->98, 79->92, 114->116
+  unk;
+}
+
+void handleFireballa3g73() { // 74->103, 78->98, 79->102, 114->117
+  unk;
+}
+
+void handleFireballa4g73() { // 74->110, 78->107, 79->109, 114->118
   unk;
 }
 
@@ -173,6 +193,10 @@ void startMovingBridgeHandlingg129() {
 }
 
 void unkg133() {
+  unk;
+}
+
+void unka1g133() { // 132->134
   unk;
 }
 
@@ -201,6 +225,10 @@ void startDoorSequenceg192() { // i could switch this to an event function, but 
 }
 
 void unkg202() {
+  unk;
+}
+
+void unka1g202() { // 199->200
   unk;
 }
 
@@ -265,6 +293,14 @@ void unkg275() {
 }
 
 void unkg279() {
+  unk;
+}
+
+void unka1g279() { // 276->277
+  unk;
+}
+
+void unka2g279() { // 276->278
   unk;
 }
 
