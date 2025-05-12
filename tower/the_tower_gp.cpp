@@ -105,6 +105,7 @@ bool tUnkg282; // this is an item set how do i do this
 void sleep(float seconds);
 // object method declaration
 // applies to all objects
+// all of these are asynchronous, assume that thread continues afterwards
 void move(int deltaX, int deltaY, float seconds);
 void scale(Object center, int xScale, int yScale, float seconds);
 void scale(int xScale, int yScale, float seconds);
@@ -123,29 +124,32 @@ void blueCoinPickupg5() {
   // this should have an increment but didn't find it unk (check later)
 }
 
-int cycle24 = 0; // another sequence lets go
+void blueCoinPickupa1g5() { // alternate version (120->212)
+  unk;
+}
+
+void blueCoinPickupa2g5() { // (120->219)
+  unk;
+}
+
 void startBoxFallg24() {
-  switch(cycle24 % 3) {
-    case 0: unkg36();
-    case 1: unkg37();
-    case 2: unkg38();
-  }
   box1g22g44.move(5, 0, 0.05);
   box4g22g44.move(5, 0, 0.05);
+  sleep(0.05);
   box1g22g44.move(-5, 0, 0.05);
   box4g22g44.move(-5, 0, 0.05);
+  sleep(0.05);
   box1g22g44.move(5, 0, 0.05);
   box4g22g44.move(5, 0, 0.05);
+  sleep(0.05);
   box1g22g44.move(-5, 0, 0.05);
   box4g22g44.move(-5, 0, 0.05);
+  sleep(0.05);
   box1g22g44.move(0, -70, 0.45);
   box4g22g44.move(0, -70, 0.45);
-  playSFX("Drop In Liquid Splash 03", 0.3, -2);
-  box1AcidSplashg40.animate(0);
-  box4AcidSplashg40.animate(0);
+  sleep(0.45)
   box1g22g44.move(0, 70, 1);
   box4g22g44.move(0, 70, 1);
-  cycle24++;
 }
 
 void unkg45() {
