@@ -36,8 +36,9 @@ DamageHitbox fireball2ExplosionHitboxg115;
 DamageHitbox fireball3ExplosionHitboxg116;
 DamageHitbox fireball4ExplosionHitboxg117;
 DamageHitbox fireball5ExplosionHitboxg118;
-Auxiliary miniBlockHelperg124g127; // unknown purpose
-Block miniBlockg126; // like 30 of these make up the wiggly bridge thing
+Auxiliary miniBlockHelper1g124g127;
+Block miniBlocksg126[]; // like 30 of these make up the wiggly bridge thing
+Auxiliary miniBlockHelper2g128;
 Saw saw1g132;
 Saw saw2g134;
 Axle spinningPlatform1Axleg146;
@@ -215,17 +216,24 @@ void handleFireballSequenceg97() { // this might be wrong lmao
   handleFireballSequenceg97();
 }
 
-void miniBlockHandlingg125() {
-  124.move(x=-160, time=5); 
-  128.move(x=-160, time=5); 
-  128.move(x=160, time=0); 
+void moveMiniBlockHelpersg125() {
+  miniBlockHelper1g124g127.move(-160, 0, 5); 
+  miniBlockHelper1g128.move(-160, 0, 5); 
+  miniBlockHelper1g128.move(160, 0, 0); 
   sleep(unk);
-  124.move(x=160, time=0); 
+  miniBlockHelper1g124g127.move(160, 0, 0); 
   miniBlockHandlingg125();
 }
 
 void startMovingBridgeHandlingg129() {
-  unk;
+  moveMiniBlockHelpersg125();
+  for(Block miniBlock : miniBlocksg126) {
+    blockX = miniBlock.getX();
+    centerX = miniBlockHelper1g124g127.getX();
+    deltaX = (miniBlockHelper1g124g127.getX() - miniBlock.getX());
+  }
+  126.areaMove(128, length=20, y=-23); 
+  126.areaMove(127, length=20, y=-23);
 }
 
 void unkg133() {
