@@ -120,18 +120,6 @@ void coinPickupg4() {
   coinsi2++;
 }
 
-void blueCoinPickupg5() {
-  // this should have an increment but didn't find it unk (check later)
-}
-
-void blueCoinPickupa1g5() { // alternate version (120->212)
-  unk;
-}
-
-void blueCoinPickupa2g5() { // (120->219)
-  unk;
-}
-
 void startBoxFallg24() {
   box1g22g44.move(5, 0, 0.05);
   box4g22g44.move(5, 0, 0.05);
@@ -152,40 +140,88 @@ void startBoxFallg24() {
   box4g22g44.move(0, 70, 1);
 }
 
-void unkg45() { // box 14357
-  box1g22g44;
-  box3g35g44;
-  box4g22g44;
-  box5g44g61;
-  box7g44g65;
+void boxShakeg45() {
+  box1g22g44.move(0, -1, 0.5);
+  box3g35g44.move(0, -1, 0.5);
+  box4g22g44.move(0, -1, 0.5);
+  box5g44g61.move(0, -1, 0.5);
+  box7g44g65.move(0, -1, 0.5);
+  sleep(0.5);
+  box1g22g44.move(0, -1, 0.5);
+  box3g35g44.move(0, -1, 0.5);
+  box4g22g44.move(0, -1, 0.5);
+  box5g44g61.move(0, -1, 0.5);
+  box7g44g65.move(0, -1, 0.5);
+  sleep(0.5);
+  boxShakeg45();
 }
 
-void handleFireballg73() {
-  unk;
+void handleFireball1g73() {
+  fireball1g74.move(0, -60, 0.72);
+  sleep(unk);
+  fireball1ExplosionHitboxg114.move(0, 10, 0); 
+  sleep(unk);
+  fireball1ExplosionHitboxg114.move(0, -10, 0); 
+  fireball1g74.move(0, 60, 0);
 }
 
-void handleFireballa1g73() { // 74->83, 78->87, 79->89, 114->115
-  unk;
+void handleFireball2g73() { // 74->83, 114->115
+  fireball2g83.move(0, -60, 0.72);
+  sleep(unk);
+  fireball2ExplosionHitboxg115.move(0, 10, 0); 
+  sleep(unk);
+  fireball2ExplosionHitboxg115.move(0, -10, 0); 
+  fireball2g83.move(0, 60, 0);
 }
 
-void handleFireballa2g73() { // 74->93, 78->98, 79->92, 114->116
-  unk;
+void handleFireball3g73() { // 74->93, 114->116
+  fireball3g93.move(0, -60, 0.72);
+  sleep(unk);
+  fireball3ExplosionHitboxg116.move(0, 10, 0); 
+  sleep(unk);
+  fireball3ExplosionHitboxg116.move(0, -10, 0); 
+  fireball3g93.move(0, 60, 0);
 }
 
-void handleFireballa3g73() { // 74->103, 78->98, 79->102, 114->117
-  unk;
+void handleFireball4g73() { // 74->103, 114->117
+  fireball4g103.move(0, -60, 0.72);
+  sleep(unk);
+  fireball4ExplosionHitboxg117.move(0, 10, 0); 
+  sleep(unk);
+  fireball4ExplosionHitboxg117.move(0, -10, 0); 
+  fireball4g103.move(0, 60, 0);
 }
 
-void handleFireballa4g73() { // 74->110, 78->107, 79->109, 114->118
-  unk;
+void handleFireball5g73() { // 74->110, 114->118
+  fireball5g110.move(0, -60, 0.72);
+  sleep(unk);
+  fireball5ExplosionHitboxg118.move(0, 10, 0); 
+  sleep(unk);
+  fireball5ExplosionHitboxg118.move(0, -10, 0); 
+  fireball5g110.move(0, 60, 0);
 }
 
 void handleFireballSequenceg97() { // this might be wrong lmao
-  unk;
+  handleFireball1g73();
+  sleep(unk);
+  handleFireball2g73();
+  sleep(unk);
+  handleFireball3g73();
+  sleep(unk);
+  handleFireball4g73();
+  sleep(unk);
+  handleFireball5g73();
+  sleep(unk);
+  handleFireballSequenceg97();
 }
 
-void unkg125() {
-  unk;
+void miniBlockHandlingg125() {
+  124.move(x=-160, time=5); 
+  128.move(x=-160, time=5); 
+  128.move(x=160, time=0); 
+  sleep(unk);
+  124.move(x=160, time=0); 
+  miniBlockHandlingg125();
 }
 
 void startMovingBridgeHandlingg129() {
