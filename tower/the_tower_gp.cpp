@@ -110,6 +110,7 @@ void sleep(float seconds);
 void move(int deltaX, int deltaY, float seconds);
 void scale(Object center, int xScale, int yScale, float seconds);
 void scale(int xScale, int yScale, float seconds);
+void follow(Object obj);
 
 // non event functions
 // functions without a spawn call won't have a group id added
@@ -227,29 +228,71 @@ void moveMiniBlockHelpersg125() {
 
 void startMovingBridgeHandlingg129() {
   moveMiniBlockHelpersg125();
-  for(Block miniBlock : miniBlocksg126) {
-    blockX = miniBlock.getX();
-    centerX = miniBlockHelper1g124g127.getX();
-    deltaX = (miniBlockHelper1g124g127.getX() - miniBlock.getX());
+  final int length = 10;
+  final int maxY = -23;
+  final int originalY = miniBlock[0].getY();
+  int deltaX;
+  double proportion;
+  while(1 = 1) { // complex stuff is area moves
+    for(Block miniBlock : miniBlocksg126) {
+      deltaX = abs((miniBlockHelper1g124g127.getX() - miniBlock.getX()));
+      proportion = 1.0 - (1.0 * deltaX / length);
+      if(proportion > 0) {
+        miniBlock.setY(originalY - proportion * maxY);
+      }
+      else {
+        deltaX = abs((miniBlockHelper2g128.getX() - miniBlock.getX()));
+        proportion = 1.0 - (1.0 * deltaX / length);
+        if(proportion > 0) {
+          miniBlock.setY(originalY - proportion * maxY);
+        }
+        else {
+          miniBlock.setY(originalY);
+        }
+    }
   }
-  126.areaMove(128, length=20, y=-23); 
-  126.areaMove(127, length=20, y=-23);
 }
 
-void unkg133() {
-  unk;
+void handleSaw1g133() {
+  saw1g132.move(50, 0, 2.01); // gradually desyncs lol 
+  saw1g132.move(-50, 0, 2); 
+  handleSaw1g133();
 }
 
-void unka1g133() { // 132->134
-  unk;
+void handleSaw2g133() { // 132->134
+  saw2g134.move(50, 0, 2.01);
+  saw2g134.move(-50, 0, 2); 
+  handleSaw2g133();
 }
 
 void startMovingSawHandlingg136() {
-  unk;
+  handleSaw1g133(); 
+  sleep(unk); 
+  handleSaw2g133();
 }
 
 void startSpinningPlatformsg147() { // naming these things is hard man :(
-  unk;
+  startRotation();
+  150.follow(149); 
+  153.follow(152); 
+  155.follow(154); 
+  157.follow(156); 
+  161.follow(162); 
+  163.follow(164); 
+  165.follow(166); 
+  167.follow(168); 
+  175.follow(176); 
+  177.follow(178); 
+  179.follow(180); 
+  181.follow(182);
+}
+
+void startRotation() { // helper for 147 just to make asynch work
+  unkg151();
+  sleep(0.31)
+  unkg160(); 
+  sleep(0.19);
+  unkg183();
 }
 
 void unkg151() {
