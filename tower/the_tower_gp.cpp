@@ -82,12 +82,11 @@ Auxiliary fallingPlatformHelperg232g250; // multiple located inside the falling 
 Pillar rightPillarg233; // right of ending sequence button
 Button fallingPlatformButtong234;
 Block leftPillarBlockg237; // physical part that tps down
-Auxiliary unkHelperg238; // idk whether its for falling platform or the camera
 Ceiling leftPillarCeilingg245; // idk why this is a group
 Block fallingPlatformBlockg250g255; // physical part
-Block coinBlock1g257g266g289; // for coins
-Block coinBlock2g260g269g289; // for blue coins
-Block coinBlock3g262g272g289; // for time
+Block coinBlock1g257g289; // for coins
+Block coinBlock2g260g289; // for blue coins
+Block coinBlock3g262g289; // for time
 LevelCoin levelCoin1g276; // for coins
 LevelCoin levelCoin2g277; // for blue coins
 LevelCoin levelCoin3g278; // for time
@@ -95,11 +94,10 @@ LevelCoin levelCoin3g278; // for time
 // boolean declaration(toggleable functions)
 // format is t(trigger id)g(group id)...
 
-bool t283g244;
-bool tUnkg259; // coin 1 trigger
-bool tUnkg261; // coin 2 trigger
-bool tUnkg263; // coin 3 trigger
-bool tUnkg282; // this is an item set how do i do this
+bool coinBlock1t258g259; // coin 1 trigger the c just means coin
+bool coinBlock2t258g261; // coin 2 trigger
+bool coinBlock3t258g263; // coin 3 trigger
+bool unkg282; // this is an item set how do i do this
 
 // built-in function declaration
 // used to highlight parameter order and the like
@@ -117,10 +115,6 @@ void follow(Object obj, float seconds);
 
 // non event functions
 // functions without a spawn call won't have a group id added
-void setStartPosition() { // built in function
-  player.setPosition(spawnWallg1.getPosition());
-}
-
 void coinPickupg4() {
   coinsi2++;
 }
@@ -325,7 +319,7 @@ void rotateSpinningPlatform3g183() {
   rotateSpinningPlatform3g183();
 }
 
-void startDoorSequenceg192() { // this might be incomplete
+void startDoorSequenceg192() { // not a whole lot of gp aspects in this cuz animation all intangible objects
   player.toggleControl(false); // bypassable in versions 2.207 and below 
   doorButtong194.move(0, -2, 2);
   sleep(unk); 
@@ -334,95 +328,123 @@ void startDoorSequenceg192() { // this might be incomplete
 }
 
 void lowerDoorg202() { // remap 199->200 original is ngp tho
-  199.move(1, 0, 0.01);
+  doorg200.move(1, 0, 0.01);
   sleep(unk);
-  199.move(-1, 0, 0.01); 
+  doorg200.move(-1, 0, 0.01); 
   sleep(unk);
-  199.move(1, 0, 0.01);
+  doorg200.move(1, 0, 0.01);
   sleep(unk);
-  199.move(-1, 0, 0.01); 
+  doorg200.move(-1, 0, 0.01); 
   sleep(unk);
-  199.move(0, -30, 8);
+  doorg200.move(0, -30, 8);
 }
 
-void unkg213() {
-  unk;
+void doorTeleportg227() {
+  player.toggleControl(false); 
+  sleep(unk);
+  player.setPosition(teleportDestinationg228.getPosition());
+  sleep(unk);
+  player.toggleControl(true);
 }
 
-void unkg214() {
-  unk;
+void levelEndSequenceg235() { // theres other gp stuff but doesn't really matter and im lazy
+  sleep(unk);
+  completeLevel();
 }
 
-void unkg218() {
-  unk;
+void coinBlock1Testg258() {
+  if(!coinBlock1t258g259) return;
+  coin1Testg264();
+  coinBlock1t258g259 = false; 
+  coinBlock1g257g289.move(y=3, time=0.1);
+  sleep(unk);
+  coinBlock1g257g289.move(y=-3, time=0.3); 
+  sleep(unk);
+  coinBlock1t258g259 = true;
 }
 
-void unkg227() {
-  unk;
+void coinBlock2Testg258() { // unk remap
+  if(!coinBlock2t258g261) return;
+  unkg264(); 
+  259.toggle(false); 
+  257.move(y=3, time=0.1);
+  sleep(unk);
+  257.move(y=-3, time=0.3); 
+  sleep(unk);
+  259.toggle(true);
 }
 
-void levelEndSequenceg235() { // the end of the level, but not the end of my suffering
-  unk;
+void coinBlock3Testg258() { // unk remap
+  if(!coinBlock3t258g263) return;
+  unkg264(); 
+  259.toggle(false); 
+  257.move(y=3, time=0.1);
+  sleep(unk);
+  257.move(y=-3, time=0.3); 
+  sleep(unk);
+  259.toggle(true);
 }
 
-void unkg258() {
-  unk;
+void coin1Testg264() {
+  if(coinsi2 >= 22) {
+    startCoin1Dropg265();
+  }
 }
 
-void unkg264() {
-  unk;
+void startCoin1Dropg265() {
+  levelCoin1g276.toggle(true); // not sure if it was toggled off to begin with
+  dropCoin1g279();
 }
 
-void unkg265() {
-  unk;
+void coin2Testg268() {
+  if(blueCoinsi1 >= 3) {
+    startCoin2Dropg270();
+  }
 }
 
-void unkg267() {
-  unk;
+void startCoin2Dropg270() {
+  levelCoin2g277.toggle(true); 
+  dropCoin2g279();
 }
 
-void unkg268() {
-  unk;
+void startCoin3Dropg273() {
+  levelCoin3g278.toggle(true); 
+  dropCoin3g279(); 
+  unkg282 = false;
 }
 
-void unkg270() {
-  unk;
+void coin3Testg275() {
+  if(t1 <= 70) {
+    startCoin3Dropg273();
+  }
 }
 
-void unkg271() {
-  unk;
+void dropCoin1g279() {
+  levelCoin1g276.move(0, -60, 1);
 }
 
-void unkg273() {
-  unk;
+void dropCoin2g279() { // 276->277
+  levelCoin2g277.move(0, -60, 1);
 }
 
-void unkg274() {
-  unk;
+void dropCoin3g279() { // 276->278
+  levelCoin3g278.move(0, -60, 1);
 }
 
-void unkg275() {
-  unk;
+void bobCoinBlocksg290() {
+  coinBlock1g257g289.move(0, -2, 1);
+  coinBlock2g260g289.move(0, -2, 1);
+  coinBlock3g262g289.move(0, -2, 1);
+  sleep(1);
+  coinBlock1g257g289.move(0, 2, 1);
+  coinBlock2g260g289.move(0, 2, 1);
+  coinBlock3g262g289.move(0, 2, 1);
+  sleep(1);
+  bobCoinBlocksg290();
 }
 
-void unkg279() {
-  unk;
-}
-
-void unka1g279() { // 276->277
-  unk;
-}
-
-void unka2g279() { // 276->278
-  unk;
-}
-
-void unkg290() {
-  unk;
-}
-
-void unkg291() {
-  unk;
+void startCoinBlockBobg291() {
+  bobCoinBlocksg290();
 }
 
 // events will be defined as functions in the form on(event)
@@ -432,7 +454,7 @@ void unkg291() {
 // treat all non-parameter variables and objects as having global scope
 
 void onStart() {
-  setStartPosition();
+  player.setPosition(spawnWallg1.getPosition());
 }
 
 void onTouchCoin() {
