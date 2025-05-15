@@ -1,10 +1,14 @@
-// unsimplified version
+// gameplay version
 
 // all variables and objects follow format (name)g(id)g(id)...
 // if an object is the parent of a group it will be (name)p(id)
 // variable declaration - built in variables
 int attempts;
 int mainTime;
+const float PI = 3.1415926
+
+// builtin objects
+Player player;
 
 // variable declaration - item ids
 int timet1; // might be float or double
@@ -41,7 +45,6 @@ Block miniBlocksg126[]; // like 30 of these make up the wiggly bridge thing
 Auxiliary miniBlockHelper2g128;
 Saw saw1g132;
 Saw saw2g134;
-Axle spinningPlatform1Axleg146;
 Gear spinningPlatform1CentralGearg146g148;
 Platform spinningPlatform1LeftMiddlePlatformg146g149; // dang thats a long name
 Platform spinningPlatform1TopMiddlePlatformg146g152;
@@ -52,7 +55,6 @@ Platform spinningPlatform1TopPlatformg153; // ^
 Platform spinningPlatform1RightPlatformg155; // ^
 Platform spinningPlatform1BottomPlatformg157; // ^
 
-Axle spinningPlatform2Axleg158;
 Gear spinningPlatform2CentralGearg158g159;
 Platform spinningPlatform2LeftMiddlePlatformg158g162; // dang thats a long name pt 2
 Platform spinningPlatform2TopMiddlePlatformg158g164;
@@ -63,7 +65,6 @@ Platform spinningPlatform2TopPlatformg163; // ^
 Platform spinningPlatform2RightPlatformg165; // ^
 Platform spinningPlatform2BottomPlatformg167; // ^
 
-Axle spinningPlatform3Axleg173;
 Gear spinningPlatform3CentralGearg173g174;
 Platform spinningPlatform3LeftMiddlePlatformg173g176; // dang thats a long name pt 3
 Platform spinningPlatform3TopMiddlePlatformg173g178;
@@ -108,9 +109,11 @@ void sleep(float seconds);
 // applies to all objects
 // all of these are asynchronous, assume that thread continues afterwards
 void move(int deltaX, int deltaY, float seconds);
+void rotate(Object center, float radians, float seconds);
+void rotate(float radians, float seconds);
 void scale(Object center, int xScale, int yScale, float seconds);
 void scale(int xScale, int yScale, float seconds);
-void follow(Object obj);
+void follow(Object obj, float seconds);
 
 // non event functions
 // functions without a spawn call won't have a group id added
@@ -272,51 +275,74 @@ void startMovingSawHandlingg136() {
 }
 
 void startSpinningPlatformsg147() { // naming these things is hard man :(
-  startRotation();
-  150.follow(149); 
-  153.follow(152); 
-  155.follow(154); 
-  157.follow(156); 
-  161.follow(162); 
-  163.follow(164); 
-  165.follow(166); 
-  167.follow(168); 
-  175.follow(176); 
-  177.follow(178); 
-  179.follow(180); 
-  181.follow(182);
-}
-
-void startRotation() { // helper for 147 just to make asynch work
-  unkg151();
+  spinningPlatform1LeftPlatformg150.follow(spinningPlatform1LeftMiddlePlatformg146g149, 9999); 
+  spinningPlatform1TopPlatformg153.follow(spinningPlatform1TopMiddlePlatformg146g152, 9999); 
+  spinningPlatform1RightPlatformg155.follow(spinningPlatform1RightMiddlePlatformg146g154, 9999); 
+  spinningPlatform1BottomPlatformg157.follow(spinningPlatform1BottomMiddlePlatformg146g156, 9999); 
+  spinningPlatform2LeftPlatformg161.follow(spinningPlatform2LeftMiddlePlatformg158g162, 9999); 
+  spinningPlatform2TopPlatformg163.follow(spinningPlatform2TopMiddlePlatformg158g164, 9999); 
+  spinningPlatform2RightPlatformg165.follow(spinningPlatform2RightMiddlePlatformg158g166, 9999); 
+  spinningPlatform2BottomPlatformg167.follow(spinningPlatform2BottomMiddlePlatformg158g168, 9999); 
+  spinningPlatform3LeftPlatformg175.follow(spinningPlatform3LeftMiddlePlatformg173g176, 9999); 
+  spinningPlatform3TopPlatformg177.follow(spinningPlatform3TopMiddlePlatformg173g178, 9999); 
+  spinningPlatform3RightPlatformg179.follow(spinningPlatform3RightMiddlePlatformg173g180, 9999); 
+  spinningPlatform3BottomPlatformg181.follow(spinningPlatform3BottomMiddlePlatformg173g182, 9999);
+  
+  rotateSpinningPlatform1g151();
   sleep(0.31)
-  unkg160(); 
+  rotateSpinningPlatform2g160(); 
   sleep(0.19);
-  unkg183();
+  rotateSpinningPlatform3g183();
 }
 
-void unkg151() {
-  unk;
+void rotateSpinningPlatform1g151() {
+  spinningPlatform1CentralGearg146g148.rotate(spinningPlatform1CentralGearg146g148, 2*PI, 8);
+  spinningPlatform1LeftMiddlePlatformg146g149.rotate(spinningPlatform1CentralGearg146g148, 2*PI, 8);
+  spinningPlatform1TopMiddlePlatformg146g152.rotate(spinningPlatform1CentralGearg146g148, 2*PI, 8);
+  spinningPlatform1RightMiddlePlatformg146g154.rotate(spinningPlatform1CentralGearg146g148, 2*PI, 8);
+  spinningPlatform1BottomMiddlePlatformg146g156.rotate(spinningPlatform1CentralGearg146g148, 2*PI, 8);
+  sleep(8);
+  rotateSpinningPlatform1g151();
 }
 
-void unkg160() {
-  unk;
+void rotateSpinningPlatform2g160() {
+  spinningPlatform2CentralGearg158g159.rotate(spinningPlatform2CentralGearg158g159, 2*PI, 8);
+  spinningPlatform2LeftMiddlePlatformg158g162.rotate(spinningPlatform2CentralGearg158g159, 2*PI, 8);
+  spinningPlatform2TopMiddlePlatformg158g164.rotate(spinningPlatform2CentralGearg158g159, 2*PI, 8);
+  spinningPlatform2RightMiddlePlatformg158g166.rotate(spinningPlatform2CentralGearg158g159, 2*PI, 8);
+  spinningPlatform2BottomMiddlePlatformg158g168.rotate(spinningPlatform2CentralGearg158g159, 2*PI, 8);
+  sleep(8);
+  rotateSpinningPlatform2g160();
 }
 
-void unkg183() {
-  unk;
+void rotateSpinningPlatform3g183() {
+  spinningPlatform3CentralGearg173g174.rotate(spinningPlatform3CentralGearg173g174, -2*PI, 8);
+  spinningPlatform3LeftMiddlePlatformg173g176.rotate(spinningPlatform3CentralGearg173g174, -2*PI, 8);
+  spinningPlatform3TopMiddlePlatformg173g178.rotate(spinningPlatform3CentralGearg173g174, -2*PI, 8);
+  spinningPlatform3RightMiddlePlatformg173g180.rotate(spinningPlatform3CentralGearg173g174, -2*PI, 8);
+  spinningPlatform3BottomMiddlePlatformg173g182.rotate(spinningPlatform3CentralGearg173g174, -2*PI, 8);
+  sleep(8);
+  rotateSpinningPlatform3g183();
 }
 
-void startDoorSequenceg192() { // i could switch this to an event function, but I'd rather have it as the events trigger the spawns
-  unk;
+void startDoorSequenceg192() { // this might be incomplete
+  player.toggleControl(false); // bypassable in versions 2.207 and below 
+  doorButtong194.move(0, -2, 2);
+  sleep(unk); 
+  lowerDoorg202();
+  player.toggleControl(true);
 }
 
-void unkg202() {
-  unk;
-}
-
-void unka1g202() { // 199->200
-  unk;
+void lowerDoorg202() { // remap 199->200 original is ngp tho
+  199.move(1, 0, 0.01);
+  sleep(unk);
+  199.move(-1, 0, 0.01); 
+  sleep(unk);
+  199.move(1, 0, 0.01);
+  sleep(unk);
+  199.move(-1, 0, 0.01); 
+  sleep(unk);
+  199.move(0, -30, 8);
 }
 
 void unkg213() {
@@ -411,4 +437,8 @@ void onStart() {
 
 void onTouchCoin() {
   coinPickupg4();
+}
+
+void onTouchBlueCoin() {
+  blueCoinsi1++;
 }
